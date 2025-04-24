@@ -100,7 +100,7 @@ jobs:
         uses: azure/k8s-set-context@v3
         with:
           method: kubeconfig
-          kubeconfig: '${{ environments.secrets.KUBECONFIG }}'
+          kubeconfig: '${{ environment.secrets.KUBECONFIG }}'
       - name: Verify kubernetes version
         run : kubectl version -o yaml
      
